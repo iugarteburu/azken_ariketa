@@ -1,0 +1,1 @@
+# azken_ariketa
