@@ -29,10 +29,12 @@ with open('employee.txt', mode='r') as f:   #with oper -> sartu fitxategiaren iz
             print("La palabra elegida aparece " + str(numPalabra) + " veces. ")
         elif (aukera == 2):
             print(lerroak[len(lerroak) - 1])
-        elif (aukera == 3): #buscar soldataAldatu()
-            ordezkatu = input("Zein hitz nahi duzu aldatu? ")
-
-            text = text.replace("Ermua", "Paris")
+        elif (aukera == 3):  # buscar soldataAldatu()
+            cambio = input("Sartu ordezkatu nahi duzun hitza: ")
+            nuevaPalabra = input("Sartu hitz berria: ")
+            for i in lerroak:
+                print(i.replace(nuevaPalabra, cambio))
+        print("---------------")
 
 
 
