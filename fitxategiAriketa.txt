@@ -1,0 +1,7 @@
+Python es un lenguaje de programacion interpretado cuya filosofia hace hincapie en la legibilidad de su codigo. 
+Se trata de un lenguaje de programacion multiparadigma, ya que soporta parcialmente la orientacion a objetos, programacion imperativa y, en menor medida, programacion funcional. 
+Es un lenguaje interpretado, dinamico y multiplataforma.
+Administrado por la Python Software Foundation, posee una licencia de codigo abierto, denominada Python Software Foundation License.
+Python se clasifica constantemente como uno de los lenguajes de programacion mas populares.
+Python fue creado a finales de los ochenta​ por Guido van Rossum en el Centro para las Matematicas y la Informatica (CWI, Centrum Wiskunde & Informatica), en los Paises Bajos, 
+como un sucesor del lenguaje de programacion ABC, capaz de manejar excepciones e interactuar con el sistema operativo Amoeba.
