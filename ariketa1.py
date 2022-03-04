@@ -1,5 +1,6 @@
 
 line_count = 0
+#automatikoki sartuta dago fitxategia ez dau ezertarako balio galderak
 fitxategia=input('Zein fitxategi nahi duzu irakurri? ')
 testua2= 'kaixo Markel Naiz'
 
@@ -28,27 +29,26 @@ def hitzaOrdezkatu():
     for i in testua:
         print(i.replace(cambio, berria))
 
-#egiteko
-def hurrengoaOrdezkatu():
-    global line_count
 
-    cambio = input('Sartu ordezkatu nahi duzun hitza:')
-    berria = input('Sartu hitz berria:')
-    for i in testua:
-        print(i.replace(cambio, berria))
-
-#egiteko
 def ordezkatuChar():
     cambio = input('Sartu ordezkatu nahi ez duzun letra:')
     for i in testua2:
         for j in range(len(i)):
-            if i[j] != cambio:
+            if i[j] == " " :
+                print(' ',end='')
+            elif i[j] != cambio:
                 print('*', end='')
             elif i[j] == cambio:
                 print(cambio, end='')
-            elif i[j] == " " :
-                print(' ',end='')
     print()
+
+#egiteko
+def hurrengoaOrdezkatu():
+   #ascci taula erabili behar da
+   #chr(letra+1)
+    for i in testua2:
+        for j in range(len(i)):
+            print(i.replace(i[j], i[j+1]))
 
 print('MENUA ')
 print('================')
