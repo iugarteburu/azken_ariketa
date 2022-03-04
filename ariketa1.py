@@ -41,8 +41,13 @@ def hurrengoaOrdezkatu():
 def ordezkatuChar():
     cambio = input('Sartu ordezkatu nahi ez duzun letra:')
     for i in testua2:
-        for cambio in testua2:
-            print(i.replace(cambio, '*'), end='')
+        for j in range(len(i)):
+            if i[j] != cambio:
+                print('*', end='')
+            elif i[j] == cambio:
+                print(cambio, end='')
+            elif i[j] == " " :
+                print(' ',end='')
     print()
 
 print('MENUA ')
