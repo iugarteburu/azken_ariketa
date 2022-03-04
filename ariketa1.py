@@ -1,19 +1,7 @@
-# langileak.csv
-# zbkia, izena, soldata...
-#    - Listetan kargatu python bidez
-#   - Listetan bilaketak egin. Menu baten bidez, Adibidez:
-
-# -xxx Izena duten langileak
-# -xxx baino gehiago irabazten duten langileak
-import csv
-
-from csv import reader
-
-
-import pandas as pd
 
 line_count = 0
 fitxategia=input('Zein fitxategi nahi duzu irakurri? ')
+testua2= 'kaixo Markel Naiz'
 
 with open('fitxategia1.txt', mode='r') as f:
     testua = f.readlines()
@@ -32,7 +20,6 @@ def hitzaBilatu():
 def azkenEsaldia():
     print(testua[len(testua) -1])
 
-
 def hitzaOrdezkatu():
     global line_count
 
@@ -41,23 +28,46 @@ def hitzaOrdezkatu():
     for i in testua:
         print(i.replace(cambio, berria))
 
+#egiteko
+def hurrengoaOrdezkatu():
+    global line_count
+
+    cambio = input('Sartu ordezkatu nahi duzun hitza:')
+    berria = input('Sartu hitz berria:')
+    for i in testua:
+        print(i.replace(cambio, berria))
+
+#egiteko
+def ordezkatuChar():
+    cambio = input('Sartu ordezkatu nahi ez duzun letra:')
+    for i in testua2:
+        for cambio in testua2:
+            print(i.replace(cambio, '*'), end='')
+    print()
+
 print('MENUA ')
 print('================')
 print('a) Kontatu Hitza')
 print('b) Azken esaldia pantailaratu')
 print('c) Ordezkatu hitza')
-print('d) Irten')
+print('d) Ordezkatu letrak')
+print('e) Hurrengo Ordezkatu')
+print('f) Irten')
 
 
 aukera = input('Sartu aukera bat: ').lower()
 
-while aukera != 'd':
+while aukera != 'f':
     if aukera == 'a':
         hitzaBilatu()
     if aukera == 'b':
         azkenEsaldia()
     if aukera == 'c':
         hitzaOrdezkatu()
+    if aukera == 'd':
+        ordezkatuChar()
+    if aukera == 'e':
+        hurrengoaOrdezkatu()
 
     aukera = input('Sartu aukera bat: ').lower()
 
