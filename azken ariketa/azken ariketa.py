@@ -5,7 +5,7 @@
 # Ordeztu testuko hitz bat beste batengatik (replace)
 # Ordeztu erabiltzaileak sartutako letra ez beste guztiak * batengatik
 # Kodetu testua eta ordeztu letra bakoitza bere hurrengoagatik
-
+#
 
 def kontatuHitza():
     palabra = input("Diga qué palabra quiere buscar: ")
@@ -30,7 +30,7 @@ def ordeztuHitza():
     with open('texto.csv', 'r') as f:
         for line in f:
             print(line.replace(s,z))
-            
+
 def ordeztuAst():
     s = str(input("Sartu nahi duzun hitza:"))
     with open ('texto.csv', 'r') as f:
@@ -44,11 +44,33 @@ def ordeztuAst():
                     print(s,end=" ")
             print()
 
+def kodetuTest():
+    with open ('texto.csv', 'r') as f:
+        for i in f:
+            for j in range(len(i)):
+                if i[j] == " ":
+                    print(" ", end="")
+                elif i[j] == "z":
+                    hurrengoa = chr(97)
+                    print(str(hurrengoa), end="")
+                elif i[j] == "Z":
+                    hurrengoa = chr(65)
+                    print(str(hurrengoa), end="")
+                elif i[j] != "z" or i[j] != "Z":
+                    letraAsc = ord(i[j])
+                    hurrengoa = chr(letraAsc + 1)
+                    print(str(hurrengoa), end="")
+                else:
+                    print(i[j], end="")
+            print("")
+
+
 def Menua():
     print("1-Kontatu zenbatetan dagoen nik nahi dudan hitza")
     print("2-Fitxategiko azken esaldia pantailaratu")
     print("3-Ordeztu testuko hitz bat beste batengatik (replace)")
     print("4-Ordeztu sartutako letra ez beste guztiak * batengatik")
+    print("5-Kodetu testua eta ordeztu letra bakoitza bere hurrengoagatik")
     aukera = int(input("Zer egin nahi duzu?"))
     if aukera == 1:
         kontatuHitza()
@@ -58,4 +80,6 @@ def Menua():
         ordeztuHitza()
     if aukera == 4:
         ordeztuAst()
+    if aukera == 5:
+        kodetuTest()
 Menua()
