@@ -64,13 +64,20 @@ def kodetuTest():
                     print(i[j], end="")
             print("")
 
-
+def dekodetuTest():
+    with open('texto2.csv', 'r') as f:
+        for i in f:
+            for j in range(len(i)):
+                if i[j] == " ":
+                    print(" ", end="")
+            
 def Menua():
     print("1-Kontatu zenbatetan dagoen nik nahi dudan hitza")
     print("2-Fitxategiko azken esaldia pantailaratu")
     print("3-Ordeztu testuko hitz bat beste batengatik (replace)")
     print("4-Ordeztu sartutako letra ez beste guztiak * batengatik")
     print("5-Kodetu testua eta ordeztu letra bakoitza bere hurrengoagatik")
+    print("6-Dekodetu testu bat")
     aukera = int(input("Zer egin nahi duzu?"))
     if aukera == 1:
         kontatuHitza()
@@ -82,4 +89,6 @@ def Menua():
         ordeztuAst()
     if aukera == 5:
         kodetuTest()
+    if aukera == 6:
+        dekodetuTest()
 Menua()
