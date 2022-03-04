@@ -42,13 +42,24 @@ def ordezkatuChar():
                 print(cambio, end='')
     print()
 
-#egiteko
 def hurrengoaOrdezkatu():
    #ascci taula erabili behar da
-   #chr(letra+1)
+    #chr(letra+1)
     for i in testua2:
         for j in range(len(i)):
-            print(i.replace(i[j], i[j+1]))
+            if i[j] == " ":
+                print(' ', end='')
+            elif i[j] == 'z':
+                hurrengoa = chr(97)
+                print(str(hurrengoa), end='')
+            elif i[j] == 'Z':
+                hurrengoa = chr(97)
+                print(str(hurrengoa), end='')
+            elif i[j] != 'Z' or i[j] != 'z':
+                oraingoa = ord(i[j])
+                hurrengoa = chr(oraingoa+1)
+                print(str(hurrengoa), end='')
+    print()
 
 print('MENUA ')
 print('================')
